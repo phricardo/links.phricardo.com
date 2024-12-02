@@ -1,3 +1,4 @@
+import { UmamiTracker } from "../components/umami";
 import "./globals.css";
 
 export default function RootLayout({
@@ -7,6 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <UmamiTracker />
       <body>{children}</body>
     </html>
   );
