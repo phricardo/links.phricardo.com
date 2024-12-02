@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { links } from "./links";
 import styles from "./page.module.css";
 
@@ -6,9 +7,12 @@ export default async function IndexPage() {
   return (
     <div className={styles.container}>
       <div className={styles.profile}>
-        <img
+        <Image
           src="https://avatars.githubusercontent.com/u/70300680"
           alt="profile picture"
+          width={150}
+          height={150}
+          className={styles.profileImage}
         />
         <div className={styles.profile_info}>
           <h1>Pedro Ricardo</h1>
