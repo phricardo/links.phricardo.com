@@ -6,8 +6,12 @@ export default async function RedirectPage({
 }: {
   params: { link: string };
 }) {
-  const { link: linkKey } = await params;
+  const { link: linkKey } = params;
   const redirectUrl = getRedirectUrl(linkKey);
 
-  redirectUrl ? redirect(redirectUrl) : notFound();
+  if (redirectUrl) {
+    redirect(redirectUrl);
+  } else {
+    notFound();
+  }
 }
